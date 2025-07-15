@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado Ejercicio 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado</h1>
+        <div class="result-box">
+            <p>Promedio de notas: <strong>{{ promedio }}</strong></p>
+            <p>Asistencia: <strong>{{ asistencia }}%</strong></p>
+            <p>Estado: <strong class="{{ 'aprobado' if estado == 'APROBADO' else 'reprobado' }}">{{ estado }}</strong></p>
+        </div>
+        <a href="{{ url_for('index') }}" class="btn">Volver al Inicio</a>
+    </div>
+</body>
+</html>

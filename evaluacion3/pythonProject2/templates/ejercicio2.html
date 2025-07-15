@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Nombre Más Largo</h1>
+        <form method="POST" action="{{ url_for('ejercicio2') }}">
+            <label>Nombre 1:</label>
+            <input type="text" name="nombre1" required>
+
+            <label>Nombre 2:</label>
+            <input type="text" name="nombre2" required>
+
+            <label>Nombre 3:</label>
+            <input type="text" name="nombre3" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="btn-back">Volver al Inicio</a>
+    </div>
+</body>
+</html>

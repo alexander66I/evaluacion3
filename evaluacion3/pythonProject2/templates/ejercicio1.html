@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Calcular Promedio</h1>
+        <form method="POST" action="{{ url_for('ejercicio1') }}">
+            <label>Nota 1 (10-70):</label>
+            <input type="number" name="nota1" min="10" max="70" required>
+
+            <label>Nota 2 (10-70):</label>
+            <input type="number" name="nota2" min="10" max="70" required>
+
+            <label>Nota 3 (10-70):</label>
+            <input type="number" name="nota3" min="10" max="70" required>
+
+            <label>Asistencia (0-100%):</label>
+            <input type="number" name="asistencia" min="0" max="100" required>
+
+            <button type="submit">Calcular</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="btn-back">Volver al Inicio</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultado Ejercicio 2</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado</h1>
+        <div class="result-box">
+            <p>El nombre con mayor cantidad de caracteres es:</p>
+            <p><strong>{{ nombre }}</strong></p>
+            <p>Con <strong>{{ caracteres }}</strong> caracteres</p>
+        </div>
+        <a href="{{ url_for('index') }}" class="btn">Volver al Inicio</a>
+    </div>
+</body>
+</html>
